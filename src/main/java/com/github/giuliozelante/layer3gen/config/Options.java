@@ -1,4 +1,4 @@
-package gae.piaz.layer3gen.config;
+package com.github.giuliozelante.layer3gen.config;
 
 import lombok.Data;
 

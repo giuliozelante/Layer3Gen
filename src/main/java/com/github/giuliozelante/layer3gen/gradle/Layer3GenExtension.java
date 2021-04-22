@@ -1,4 +1,4 @@
-package gae.piaz.layer3gen.gradle;
+package com.github.giuliozelante.layer3gen.gradle;
 
 import lombok.Data;
 

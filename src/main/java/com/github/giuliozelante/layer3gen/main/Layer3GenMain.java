@@ -1,7 +1,7 @@
-package gae.piaz.layer3gen.main;
+package com.github.giuliozelante.layer3gen.main;
 
-import gae.piaz.layer3gen.CodeGenerator;
-import gae.piaz.layer3gen.config.CodeGeneratorConfig;
+import com.github.giuliozelante.layer3gen.CodeGenerator;
+import com.github.giuliozelante.layer3gen.config.CodeGeneratorConfig;
 import org.apache.commons.lang3.ArrayUtils;
 
 public class Layer3GenMain {

@@ -2,12 +2,13 @@ plugins {
 	id 'java'
 	id 'idea'
 	id 'java-gradle-plugin'
+	id 'maven-publish'
 	id 'maven'
 	id 'application'
 	id 'com.gradle.plugin-publish' version '0.12.0'
 }
 
-group = 'gae.piaz'
+group = 'com.github.giuliozelante'
 version = '1.7'
 
 repositories {
@@ -38,22 +39,22 @@ dependencies {
 gradlePlugin {
 	plugins {
 		simplePlugin {
-			id = 'gae.piaz.layer3gen'
+			id = 'com.github.giuliozelante.layer3gen'
 			displayName = 'Layer 3 Gen'
 			description = 'Generates Spring standard 3 layer classes (Controller, Service, Repository) starting from JPA entities'
-			implementationClass = 'gae.piaz.layer3gen.gradle.Layer3GenPlugin'
+			implementationClass = 'com.github.giuliozelante.layer3gen.gradle.Layer3GenPlugin'
 		}
 	}
 }
 
 pluginBundle {
-	website = 'https://github.com/GaetanoPiazzolla/springboot-3layer-generator'
-	vcsUrl = 'https://github.com/GaetanoPiazzolla/springboot-3layer-generator'
+	website = 'https://github.com/giuliozelante/Layer3Gen'
+	vcsUrl = 'https://github.com/giuliozelante/Layer3Gen'
 	tags = ['jpa', 'code-generation', 'spring', 'spring-data']
 }
 
 application {
-	mainClass = 'gae.piaz.layer3gen.main.Layer3GenMain'
+	mainClass = 'com.github.giuliozelante.layer3gen.main.Layer3GenMain'
 }
 
 distZip {

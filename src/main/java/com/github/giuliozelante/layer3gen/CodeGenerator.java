@@ -1,7 +1,7 @@
-package gae.piaz.layer3gen;
+package com.github.giuliozelante.layer3gen;
 
 import freemarker.template.TemplateException;
-import gae.piaz.layer3gen.config.CodeGeneratorConfig;
+import com.github.giuliozelante.layer3gen.config.CodeGeneratorConfig;
 import lombok.extern.slf4j.Slf4j;
 import org.reflections.Reflections;
 import org.reflections.scanners.FieldAnnotationsScanner;

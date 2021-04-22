@@ -1,9 +1,7 @@
-package gae.piaz.layer3gen.gradle;
+package com.github.giuliozelante.layer3gen.gradle;
 
-import gae.piaz.layer3gen.CodeGenerator;
 import org.gradle.api.Plugin;
 import org.gradle.api.Project;
-import org.gradle.api.Task;
 
 /**
  * entityGen Gradle plugin.

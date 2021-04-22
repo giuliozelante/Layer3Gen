@@ -1,6 +1,6 @@
-package gae.piaz.layer3gen.main;
+package com.github.giuliozelante.layer3gen.main;
 
-import gae.piaz.layer3gen.config.CodeGeneratorConfig;
+import com.github.giuliozelante.layer3gen.config.CodeGeneratorConfig;
 
 import java.io.File;
 import java.net.MalformedURLException;

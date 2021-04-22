@@ -1,10 +1,10 @@
-package gae.piaz.layer3gen.test;
+package com.github.giuliozelante.layer3gen.test;
 
 
+import com.github.giuliozelante.layer3gen.CodeGenerator;
 import freemarker.template.TemplateException;
-import gae.piaz.layer3gen.CodeGenerator;
-import gae.piaz.layer3gen.config.CodeGeneratorConfig;
-import gae.piaz.layer3gen.main.ClassLoaderBuilderMain;
+import com.github.giuliozelante.layer3gen.config.CodeGeneratorConfig;
+import com.github.giuliozelante.layer3gen.main.ClassLoaderBuilderMain;
 import org.junit.Test;
 
 import java.io.IOException;

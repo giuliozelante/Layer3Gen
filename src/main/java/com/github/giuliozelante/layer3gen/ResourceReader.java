@@ -1,4 +1,4 @@
-package gae.piaz.layer3gen;
+package com.github.giuliozelante.layer3gen;
 
 import java.io.File;
 import java.io.FileInputStream;

@@ -1,6 +1,6 @@
-package gae.piaz.layer3gen.config;
+package com.github.giuliozelante.layer3gen.config;
 
-import gae.piaz.layer3gen.ResourceReader;
+import com.github.giuliozelante.layer3gen.ResourceReader;
 import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;

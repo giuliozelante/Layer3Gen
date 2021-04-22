@@ -1,4 +1,4 @@
-package gae.piaz.layer3gen;
+package com.github.giuliozelante.layer3gen;
 
 import freemarker.cache.StringTemplateLoader;
 import freemarker.ext.beans.BeansWrapper;
@@ -6,7 +6,7 @@ import freemarker.template.Configuration;
 import freemarker.template.Template;
 import freemarker.template.TemplateException;
 import freemarker.template.TemplateExceptionHandler;
-import gae.piaz.layer3gen.config.CodeGeneratorConfig;
+import com.github.giuliozelante.layer3gen.config.CodeGeneratorConfig;
 import lombok.Data;
 
 import java.io.*;

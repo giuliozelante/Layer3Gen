@@ -12,8 +12,8 @@ public interface CrudService<E,P> {
 
     E update(E entity);
 
-    Page<E> read(E entity, Pageable pageable);
-    E readOne(P primaryKey);
+    Page<E> get(E entity, Pageable pageable);
+    E get(P primaryKey);
 
     void delete(P primaryKey);
 

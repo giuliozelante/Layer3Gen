@@ -29,13 +29,13 @@ public class ${entityClass}Service implements CrudService<${entityClass},${prima
     }
 
     @Override
-    public Page<${entityClass}> read(${entityClass} entity, Pageable pageable) {
+    public Page<${entityClass}> get(${entityClass} entity, Pageable pageable) {
         Example<${entityClass}> example = Example.of(entity);
         return repository.findAll(example,pageable);
     }
 
     @Override
-    public ${entityClass} readOne(${primaryKeyClass} primaryKey) {
+    public ${entityClass} get(${primaryKeyClass} primaryKey) {
         return repository.getOne(primaryKey);
     }
 

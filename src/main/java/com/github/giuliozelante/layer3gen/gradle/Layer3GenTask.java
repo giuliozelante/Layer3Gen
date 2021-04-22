@@ -1,7 +1,7 @@
-package gae.piaz.layer3gen.gradle;
+package com.github.giuliozelante.layer3gen.gradle;
 
-import gae.piaz.layer3gen.CodeGenerator;
-import gae.piaz.layer3gen.config.CodeGeneratorConfig;
+import com.github.giuliozelante.layer3gen.CodeGenerator;
+import com.github.giuliozelante.layer3gen.config.CodeGeneratorConfig;
 import org.gradle.api.DefaultTask;
 import org.gradle.api.tasks.TaskAction;
 

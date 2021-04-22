@@ -16,12 +16,12 @@ Generates the standard SPRING 3 layer CRUD architecture starting from JPA entiti
 ```groovy
 buildscript {
     dependencies {
-	classpath "gradle.plugin.gae.piaz:layer3gen:1.7"
+	classpath "gradle.plugin.com.github.giuliozelante:layer3gen:1.7"
     }
     // ....
 }
 // ...
-apply plugin: 'gae.piaz.layer3gen'
+apply plugin: 'com.github.giuliozelante.layer3gen'
 ```
 
 2. Create a file named _3layer-settings.yml_ in the directory src/main/resources/;
@@ -79,13 +79,13 @@ public class BooksService implements CrudService<Books,java.lang.Integer> {
     }
 
     @Override
-    public Page<Books> read(Books entity, Pageable pageable) {
+    public Page<Books> get(Books entity, Pageable pageable) {
         Example<Books> example = Example.of(entity);
         return repository.findAll(example,pageable);
     }
 
     @Override
-    public Books readOne(java.lang.Integer primaryKey) {
+    public Books get(java.lang.Integer primaryKey) {
         return repository.getOne(primaryKey);
     }
 
@@ -122,19 +122,19 @@ public class BooksControllerDTO implements CrudController<BooksDTO,java.lang.Int
     }
 
     @Override
-    public ResponseEntity<Page<BooksDTO>> read(
+    public ResponseEntity<Page<BooksDTO>> get(
             @RequestBody BooksDTO dto,
             @RequestParam("page") Integer page,
             @RequestParam("size") Integer size) {
         Pageable pageable = PageRequest.of(page,size);
         Books entity = mapper.toEntity(dto);
-        Page<BooksDTO> pages = service.read(entity, pageable).map(mapper::toDto);
+        Page<BooksDTO> pages = service.get(entity, pageable).map(mapper::toDto);
         return ResponseEntity.ok(pages);
     }
 
     @Override
-    public ResponseEntity<BooksDTO> readOne(@PathVariable("id") java.lang.Integer primaryKey) {
-         Books entity = service.readOne(primaryKey);
+    public ResponseEntity<BooksDTO> get(@PathVariable("id") java.lang.Integer primaryKey) {
+         Books entity = service.get(primaryKey);
          return ResponseEntity.ok(mapper.toDto(entity));
     }
 

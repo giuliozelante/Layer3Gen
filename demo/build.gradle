@@ -1,7 +1,7 @@
 
 buildscript {
 	dependencies {
-		classpath "gradle.plugin.gae.piaz:layer3gen:1.6"
+		classpath "gradle.plugin.com.github.giuliozelante:layer3gen:1.6"
 	}
 	repositories {
 		mavenCentral()
@@ -44,4 +44,4 @@ test {
 	useJUnitPlatform()
 }
 
-apply plugin: 'gae.piaz.layer3gen'
+apply plugin: 'com.github.giuliozelante.layer3gen'

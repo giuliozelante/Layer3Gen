@@ -1,12 +1,9 @@
-package gae.piaz.layer3gen.gradle;
+package com.github.giuliozelante.layer3gen.gradle;
 
-import gae.piaz.layer3gen.config.CodeGeneratorConfig;
 import org.gradle.api.Project;
 import org.gradle.api.file.FileCollection;
-import org.gradle.api.invocation.Gradle;
 import org.gradle.api.plugins.JavaPluginConvention;
 import org.gradle.api.tasks.SourceSetContainer;
-import org.gradle.tooling.model.GradleProject;
 
 import java.io.File;
 import java.net.MalformedURLException;
