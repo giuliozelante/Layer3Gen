@@ -1,3 +1,5 @@
+# This was forked from Gaetano Piazzolla who did an amazing job, really impressed, I just did some refactoring and changed few things here and there to suit my likings and because I thought some things were off
+* * *
 # Layer3gen
 Generates the standard SPRING 3 layer CRUD architecture starting from JPA entities.
 * * *
