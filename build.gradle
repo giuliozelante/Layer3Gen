@@ -4,11 +4,12 @@ plugins {
 	id 'java-gradle-plugin'
 	id 'maven-publish'
 	id 'application'
-	id 'com.gradle.plugin-publish' version '0.12.0'
+	id 'com.gradle.plugin-publish' version '1.0.0'
+	id "com.github.ben-manes.versions" version "0.42.0"
 }
 
 group = 'com.github.giuliozelante'
-version = '1.7'
+version = '1.8'
 
 repositories {
 	mavenCentral()
@@ -16,23 +17,23 @@ repositories {
 
 dependencies {
 
-	implementation 'org.yaml:snakeyaml:1.23' // parse yml
-	implementation 'org.slf4j:slf4j-api:1.7.25' // logging
-	implementation 'org.slf4j:slf4j-log4j12:1.7.25'
-	implementation 'com.google.guava:guava:26.0-jre' // needed but don't know why
-	implementation 'org.apache.commons:commons-lang3:3.8.1' // utils
+	implementation 'org.yaml:snakeyaml:1.30' // parse yml
+	implementation 'org.slf4j:slf4j-api:1.7.36' // logging
+	implementation 'org.slf4j:slf4j-log4j12:1.7.36'
+	implementation 'com.google.guava:guava:31.1-jre' // needed but don't know why
+	implementation 'org.apache.commons:commons-lang3:3.12.0' // utils
 
-	implementation 'org.hibernate.javax.persistence:hibernate-jpa-2.1-api:1.0.0.Final' // @Entity class needed
-	implementation 'org.reflections:reflections:0.9.11' // read classes
-	implementation 'org.freemarker:freemarker:2.3.23'// write classes
+	implementation 'org.hibernate.javax.persistence:hibernate-jpa-2.1-api:1.0.2.Final' // @Entity class needed
+	implementation 'org.reflections:reflections:0.10.2' // read classes
+	implementation 'org.freemarker:freemarker:2.3.31'// write classes
 
-	compileOnly 'org.projectlombok:lombok:1.18.2' // autogenerate setter getter etc
+	compileOnly 'org.projectlombok:lombok:1.18.24' // autogenerate setter getter etc
 	compileOnly gradleApi() // gradle plugin
 
-	annotationProcessor "org.mapstruct:mapstruct-processor:1.3.1.Final"
-	annotationProcessor 'org.projectlombok:lombok:1.18.12'
+	annotationProcessor "org.mapstruct:mapstruct-processor:1.5.2.Final"
+	annotationProcessor 'org.projectlombok:lombok:1.18.24'
 
-	testImplementation 'junit:junit:4.12'
+	testImplementation 'junit:junit:4.13.2'
 }
 
 gradlePlugin {
@@ -61,7 +62,7 @@ distZip {
 		from './conf'
 		include '*'
 	}
-	exclude 'gradle-api-6.6.1.jar'
+	exclude 'gradle-api*.jar'
 }
 
 installDist {
@@ -69,6 +70,11 @@ installDist {
 		from './conf'
 		include '*'
 	}
-	exclude 'gradle-api-6.6.1.jar'
+	exclude 'gradle-api*.jar'
 }
 
+java {
+	toolchain {
+		languageVersion = JavaLanguageVersion.of(17)
+	}
+}
